@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_little_calligraphy_teacher_introduce"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easier.writepre.ui.LittleCalligraphyTeacherIntroduceActivity"
+    android:background="@color/gray">
+    <include
+        android:id="@+id/title"
+        layout="@layout/social_topbar_layout"/>
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:text="@string/little_calligraphy_teacher_sign_up"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:enabled="false"
+        android:background="@drawable/bg_red_gray_selector"
+        style="@style/SocialNormalTxtWhite"/>
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/wv_content"
+        android:layout_above="@+id/btn_sign_up"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    </com.tencent.smtt.sdk.WebView>
+
+</RelativeLayout>

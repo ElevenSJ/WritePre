@@ -1,0 +1,275 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    tools:context="com.easier.writepre.fragment.XsfTecPracticeExamFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20px"
+        android:layout_marginTop="15px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10px">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="一、临摹：请任选下面四幅作品中的一幅进行临摹，力求准确：" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/SocialNormalTxtBlackMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="欧阳询《九成宫醴泉铭》、赵孟頫《三门记》、《曹全碑》、《史晨碑》" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/banner"
+            android:layout_width="@dimen/banner_width"
+            android:layout_height="@dimen/banner_height"
+            >
+
+            <com.easier.writepre.widget.ChildViewPager
+                android:id="@+id/banner_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <com.easier.writepre.widget.ViewPageIndicator
+                android:id="@+id/banner_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:padding="15px" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10px"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传视频:"
+                style="@style/SocialNormalTxtRed"
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_video_layout"
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:layout_marginTop="10px"
+                >
+
+
+                <ImageView
+                    android:id="@+id/img_selected_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/img_add_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bg_video_selector"
+                    android:scaleType="centerInside"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20px"
+                    android:src="@drawable/circle_clear_record"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="时长在2分钟以内，至少包含一个字的完整书写过程。"
+                style="@style/SocialNormalTxtBlackMin"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传图片"
+                style="@style/SocialNormalTxtRed" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <RelativeLayout
+                        android:layout_width="300px"
+                        android:layout_height="300px"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_selected_picture_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/img_add_picture_first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/exam_add"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/img_delete_picture_first"
+                            android:layout_width="50px"
+                            android:layout_height="50px"
+                            android:layout_alignRight="@+id/img_selected_picture_first"
+                            android:src="@drawable/pk_works_pic_delete"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/pic_txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/SocialNormalTxtWhiteMin"
+                            android:text="图片示例"
+                            android:background="@color/social_red"
+                            android:padding="2px"
+                            android:paddingLeft="6px"
+                            android:paddingRight="6px"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_little_master"
+                        style="@style/SocialNormalTxtBlackMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_selected_picture_first"
+                        android:layout_marginTop="20px"
+                        android:duplicateParentState="true"
+                        android:text="考时形象及书写内容" />
+                </LinearLayout>
+
+                <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="120px"-->
+                <!--android:background="@drawable/social_line"-->
+                <!--android:layout_gravity="center"/>-->
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="300px"
+                        android:layout_height="300px">
+
+                        <ImageView
+                            android:id="@+id/img_selected_picture_second"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"/>
+
+
+                        <ImageView
+                            android:id="@+id/img_add_picture_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/exam_add"
+                            android:layout_centerInParent="true"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/pic_txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/SocialNormalTxtWhiteMin"
+                            android:text="图片示例"
+                            android:background="@color/social_red"
+                            android:padding="2px"
+                            android:paddingLeft="6px"
+                            android:paddingRight="6px"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_delete_picture_second"
+                            android:layout_width="50px"
+                            android:layout_height="50px"
+                            android:layout_alignRight="@+id/img_selected_picture_second"
+                            android:src="@drawable/pk_works_pic_delete"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_calligraphy_talents"
+                        style="@style/SocialNormalTxtBlackMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20px"
+                        android:layout_below="@id/img_selected_picture_second"
+                        android:drawablePadding="20px"
+                        android:duplicateParentState="true"
+                        android:gravity="center"
+                        android:text="考生手执作品" />
+                </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/user_icon"
+            android:layout_width="80px"
+            android:layout_height="80px">
+
+        </com.easier.writepre.widget.RoundImageView>
+
+        <RatingBar
+            android:id="@+id/user_ratingBar"
+            style="@style/RatingBar_Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:max="5"
+            android:rating="0"
+            android:stepSize="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/user_icon"
+            android:layout_alignTop="@+id/user_icon"
+            android:layout_marginLeft="20px"
+            android:layout_toLeftOf="@+id/user_ratingBar"
+            android:layout_toRightOf="@+id/user_icon"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/SocialNormalTxtBlackMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用戶名" />
+
+            <TextView
+                android:id="@+id/user_time"
+                style="@style/SocialNormalTxtGrayleast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="2016-09-09" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/user_desc"
+        style="@style/SocialNormalTxtBlackMin"
+        android:paddingLeft="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="用户评论" />
+
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20px"
+        android:background="@drawable/social_line" />
+
+
+</LinearLayout>

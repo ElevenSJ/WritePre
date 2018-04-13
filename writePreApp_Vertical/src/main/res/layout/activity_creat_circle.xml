@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!-- 主要内容 -->
+
+            <RelativeLayout
+                android:id="@+id/layout_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <ImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/empty_head" />
+
+                <TextView
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="封面" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/name_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="圈名" />
+
+                <EditText
+                    android:id="@+id/et_input_name"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right1"
+                    android:layout_toRightOf="@+id/name_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:maxLength="10"
+                    android:padding="20px"></EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/desc_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="简介" />
+
+                <EditText
+                    android:id="@+id/et_input_desc"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right2"
+                    android:layout_toRightOf="@+id/desc_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:padding="20px"></EditText>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/type_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="类别" />
+
+                <TextView
+                    android:id="@+id/et_input_type"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right3"
+                    android:layout_toRightOf="@+id/type_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:padding="20px"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/tag_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="标签" />
+
+                <TextView
+                    android:id="@+id/et_input_tag"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right4"
+                    android:layout_toRightOf="@+id/tag_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:padding="20px"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <ImageView
+                    android:id="@+id/arrow_right5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/isopen_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="权限" />
+
+                <TextView
+                    android:id="@+id/et_input_isopen"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right5"
+                    android:layout_toRightOf="@+id/isopen_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:padding="20px"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/arrow_right6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arraw_right" />
+
+                <TextView
+                    android:id="@+id/num_info"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="人数" />
+
+                <TextView
+                    android:id="@+id/et_input_num"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px"
+                    android:layout_toLeftOf="@+id/arrow_right6"
+                    android:layout_toRightOf="@+id/num_info"
+                    android:background="@color/transparent"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:gravity="center_vertical|right"
+                    android:padding="20px"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

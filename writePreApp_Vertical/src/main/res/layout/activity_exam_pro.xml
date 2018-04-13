@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_to_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rel_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/bg1"
+                android:layout_width="match_parent"
+                android:layout_height="20px"
+                android:background="@color/bg_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_topinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/bg1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="30px"
+                android:paddingTop="30px">
+
+                <TextView
+                    android:id="@+id/tv_time_and_time"
+                    style="@style/SocialNormalTxtGraySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30px"
+                    android:text="当前状态: 理论考试" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:layout_below="@+id/ll_topinfo"
+                android:background="@color/act_bg"
+                android:src="@drawable/multilateral_line" />
+
+            <View
+                android:id="@+id/bg2"
+                android:layout_width="match_parent"
+                android:layout_height="30px"
+                android:layout_below="@+id/line"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:id="@+id/rel_process"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/bg2"
+                android:background="@color/white"
+                android:gravity="center">
+                <!--理论考试-->
+                <LinearLayout
+                    android:id="@+id/ll_theory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80px"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_theory"
+                        style="@style/SocialTitleBlackTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60px"
+                        android:layout_marginRight="60px"
+                        android:background="@drawable/bg_btn_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="25px"
+                        android:text="理论考试"
+                        android:textColor="@drawable/btn_enable_text_grayorwhite_selector" />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="60px"
+                        android:background="@color/gray" />
+
+                    <Button
+                        android:id="@+id/btn_theory"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guanzhu_btn_selector"
+                        android:paddingBottom="10px"
+                        android:paddingLeft="15px"
+                        android:paddingRight="15px"
+                        android:paddingTop="10px"
+                        android:text="完成"
+                        android:textColor="@drawable/btn_enable_text_selector" />
+                </LinearLayout>
+                <!--实践考试-->
+                <LinearLayout
+                    android:id="@+id/ll_practice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_theory"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="60px"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_practice"
+                        style="@style/SocialTitleBlackTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60px"
+                        android:layout_marginRight="60px"
+                        android:background="@drawable/bg_btn_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="25px"
+                        android:text="实践考试"
+                        android:textColor="@drawable/btn_enable_text_grayorwhite_selector" />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="60px"
+                        android:background="@color/gray" />
+
+                    <Button
+                        android:id="@+id/btn_practice"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guanzhu_btn_selector"
+                        android:paddingBottom="10px"
+                        android:paddingLeft="15px"
+                        android:paddingRight="15px"
+                        android:paddingTop="10px"
+                        android:text="完成"
+                        android:textColor="@drawable/btn_enable_text_selector" />
+                </LinearLayout>
+                <!--投寄作品-->
+                <LinearLayout
+                    android:id="@+id/ll_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_practice"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="60px"
+                        android:background="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tv_post"
+                        style="@style/SocialTitleBlackTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60px"
+                        android:layout_marginRight="60px"
+                        android:background="@drawable/bg_btn_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:padding="25px"
+                        android:text="投寄作品"
+                        android:textColor="@drawable/btn_enable_text_grayorwhite_selector" />
+
+                    <View
+                        android:layout_width="2px"
+                        android:layout_height="60px"
+                        android:background="@color/gray" />
+
+                    <Button
+                        android:id="@+id/btn_post"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/guanzhu_btn_selector"
+                        android:paddingBottom="10px"
+                        android:paddingLeft="15px"
+                        android:paddingRight="15px"
+                        android:paddingTop="10px"
+                        android:text="完成"
+                        android:textColor="@drawable/btn_enable_text_selector" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+
+</LinearLayout>

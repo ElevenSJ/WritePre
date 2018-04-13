@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 自动布局设计图宽高 -->
+	<dimen name="design_width">1334px</dimen>
+    <dimen name="design_height">750px</dimen>
+	
+</resources>

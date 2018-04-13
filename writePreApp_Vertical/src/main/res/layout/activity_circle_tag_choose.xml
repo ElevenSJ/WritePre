@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <ScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30px" >
+
+            <LinearLayout
+                android:id="@+id/tag_title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/circle_tag_title_txt" />
+
+                <TextView
+                    android:id="@+id/txt_tag_num"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36px"
+                    android:text="0/6"
+                    android:textColor="#c60000" />
+            </LinearLayout>
+
+            <com.easier.writepre.widget.MyGridLayout
+                android:id="@+id/layout_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tag_title_layout"
+                android:layout_marginTop="26px" />
+
+            <TextView
+                android:id="@+id/txt_tag_info"
+                style="@style/SocialNormalTxtGraySmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_tag"
+                android:gravity="center"
+                android:paddingBottom="30px"
+                android:text="@string/circle_tag_hint" />
+
+            <RelativeLayout
+                android:id="@+id/add_tag_layout"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/txt_tag_info"
+                android:layout_marginTop="26px"
+                android:background="@drawable/shape_circle_button_gray"
+                android:padding="20px"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/bt_add"
+                    style="@style/SocialNormalTxtBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:text="添加" />
+
+                <EditText
+                    android:id="@+id/et_tag"
+                    style="@style/SocialNormalTxtGraySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/bt_add"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/circle_tag_add_hint"
+                    android:maxLength="6" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="26px"
+                android:layout_below="@+id/txt_tag_info"
+                android:background="@drawable/social_line" />
+
+            <TextView
+                android:id="@+id/txt_tag_hot"
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="10px"
+                android:text="@string/circle_hot_tag_txt" />
+
+            <com.easier.writepre.widget.MyGridLayout
+                android:id="@+id/layout_hot_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_tag_hot"
+                android:layout_marginTop="36px" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

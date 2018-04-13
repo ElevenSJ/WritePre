@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.easier.writepre.widget.TaskChildViewPager
+                    android:id="@+id/pk_image_view_pager"
+                    android:layout_width="@dimen/work_width"
+                    android:layout_height="@dimen/work_height"></com.easier.writepre.widget.TaskChildViewPager>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pk_linear_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal"></LinearLayout>
+        </RelativeLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_taskwork"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/work_height"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            fresco:placeholderImage="@drawable/empty_photo"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="false"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundWithOverlayColor="#f6f6f6"
+            fresco:roundedCornerRadius="10px"
+            fresco:roundingBorderColor="#f6f6f6"
+            fresco:roundingBorderWidth="1px" />
+
+        <ImageView
+            android:id="@+id/play_video"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/video_player_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_noconfirm"
+        style="@style/SocialNormalTxtWhiteMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20px"
+        android:background="@color/social_red"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="2px"
+        android:paddingLeft="8px"
+        android:paddingRight="8px"
+        android:text="" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_layout"
+        android:layout_marginTop="36px"
+        android:paddingLeft="16px"
+        android:paddingRight="16px">
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginBottom="46px"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/SocialNormalTxtGraySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/remind"
+                android:drawablePadding="5px"
+                android:gravity="center_vertical"
+                android:textColor="#666666"
+                android:textSize="26px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calligrapher_jianjie" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calligrapher_jianjie" />
+
+                <TextView
+                    android:id="@+id/tv_learn_time"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:layout_below="@+id/layout_content"
+        android:background="@drawable/multilateral_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_margin="20px">
+
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_uname"
+            style="@style/SocialNormalTxtBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ll_comment_count"
+            android:layout_toRightOf="@+id/iv_head"
+            android:ellipsize="end"
+            android:paddingLeft="10px"
+            android:singleLine="true"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/ll_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@drawable/calligrapher_jianjie" />
+
+            <TextView
+                android:id="@+id/tv_comment_num"
+                style="@style/SocialNormalTxtRedMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px" />
+
+            <TextView
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:text="人提交作业" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

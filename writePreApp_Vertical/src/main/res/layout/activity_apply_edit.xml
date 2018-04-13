@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <EditText
+        android:id="@+id/et_input_name"
+        style="@style/SocialNormalTxtGray"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_margin="20px"
+        android:padding="20px"
+        android:background="@drawable/shape_circle_button_gray"
+        android:gravity="center_vertical"
+        android:hint="请输入圈子名称（10字以内）"
+        android:imeOptions="actionDone" >
+    </EditText>
+
+</LinearLayout>

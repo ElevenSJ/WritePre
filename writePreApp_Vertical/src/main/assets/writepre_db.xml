@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database
+    name="sjcys"
+    version="1" >
+        <tables>
+            <table name="tb_msg" >
+            <columns>
+	            <column
+	                name="_id"
+	                obligatory="PRIMARY KEY"
+	                type="text" />
+	
+	            <column
+	                name="userid"
+	                obligatory="NOT NULL"
+	                type="text" />
+	
+	            <column
+	                name="title"
+	                type="text" />
+	
+	            <column
+	                name="ctime"
+	                type="text" />
+	            
+	            <column
+	                name="is_read"
+	                type="integer" />
+	
+	            <column
+	                name="url"
+	                type="TEXT" />
+
+            </columns>
+        </table>
+        </tables>
+
+<!-- ****************************数据表触发器************************ -->
+    <triggers>
+    </triggers>
+</database>

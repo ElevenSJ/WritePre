@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    tools:context="com.easier.writepre.ui.XsfTecPracticeExamTipActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/social_topbar_layout"/>
+    <Button
+        android:id="@+id/button"
+        android:text="确认（并开始考试计时）"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_red_gray_selector"/>
+
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/wv_content"
+        android:layout_above="@id/button"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+    </com.tencent.smtt.sdk.WebView>
+</RelativeLayout>

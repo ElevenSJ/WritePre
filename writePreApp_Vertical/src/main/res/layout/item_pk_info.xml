@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20px">
+
+    <TextView
+        android:id="@+id/tv_pk_title"
+        style="@style/SocialTitleCenterTxt"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pk_title">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="3"
+            fresco:placeholderImage="@drawable/empty_photo"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="false"
+            fresco:roundedCornerRadius="10dp"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundWithOverlayColor="@color/white"
+            fresco:roundingBorderWidth="1px"
+            fresco:roundingBorderColor="@color/bg_gray"
+            />
+
+        />
+
+        <TextView
+            android:id="@+id/tv_pk_status"
+            style="@style/SocialNormalTxtWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:textColor="@color/white"
+            android:padding="10px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

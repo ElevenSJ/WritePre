@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="15px">
+
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/iv_img_head"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/empty_head" />
+
+        <LinearLayout
+            android:id="@+id/ll_userlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15px"
+            android:layout_toRightOf="@+id/iv_img_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_uname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名字"
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="被"
+                    android:textColor="#999999"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:id="@+id/tv_attention_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#c60000"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人关注"
+                    android:textColor="#999999"
+                    android:textSize="22px" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_attention"
+            style="@style/SocialNormalTxtRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="@drawable/guanzhu_btn_selector"
+            android:focusable="false"
+            android:paddingBottom="10px"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="10px"
+            android:text="关注TA"
+            android:textColor="@drawable/guanzhu_text_color_selector" />
+    </RelativeLayout>
+
+    <com.sj.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginBottom="30px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:orientation="horizontal">
+
+        <com.easier.writepre.widget.SquareAllEssenceGridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20px"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@null"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp" />
+
+        <ImageView
+            android:id="@+id/album_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:maxHeight="@dimen/album_image_max_height"
+            android:maxWidth="@dimen/album_image_max_width"
+            android:minHeight="@dimen/album_image_min_size"
+            android:minWidth="@dimen/album_image_min_size"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </com.sj.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

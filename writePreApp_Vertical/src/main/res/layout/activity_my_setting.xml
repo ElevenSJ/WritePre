@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+	<include
+		android:id="@+id/title"
+		layout="@layout/social_topbar_layout"/>
+	
+	<ListView 
+	    android:id="@+id/lv_list"
+	    android:layout_width="match_parent"
+		android:layout_below="@id/title"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20px"
+	    android:background="@color/white"
+	    android:divider="@color/bg_gray"
+	    android:dividerHeight="1px"
+	    >
+	</ListView>
+	<Button 
+	    android:id="@+id/btn_logout"
+		android:layout_below="@id/lv_list"
+	    android:layout_marginTop="20px"
+	    android:layout_width="match_parent"
+	    android:layout_height="100px"
+	    android:background="@color/white"
+	    android:text="退出登录"
+	    android:onClick="onClick"
+	    style="@style/SocialNormalTxtRed"
+	    />
+
+	<View
+		android:id="@+id/left_view"
+		android:layout_width="50px"
+		android:layout_height="50px"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentBottom="true"
+		android:background="@color/transparent"
+		/>
+	<View
+		android:id="@+id/right_view"
+		android:layout_width="50px"
+		android:layout_height="50px"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentBottom="true"
+		android:background="@color/transparent"
+		/>
+</RelativeLayout>

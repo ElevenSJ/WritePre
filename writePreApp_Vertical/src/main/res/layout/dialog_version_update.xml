@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/corners_white_bg">
+
+    <LinearLayout
+        android:layout_width="@dimen/dialog_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10px" >
+
+        <TextView
+            style="@style/SocialNormalTxtRed"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:gravity="center"
+            android:text="版本更新" />
+
+        <View
+            android:layout_width="40px"
+            android:layout_height="1px"
+            android:layout_gravity="center"
+            android:background="@color/social_red" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50px"
+            android:gravity="center_vertical" >
+
+            <TextView
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="version:" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.0.2" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/tv_content"
+            style="@style/SocialNormalTxtGraySmall"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_et_width"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:text="1、更改竖版界面。
+2、增加社交功能。
+3、强化视频功能。" 
+			android:gravity="top|left"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/SocialNormalTxtGraySmall"
+                android:layout_width="0dp"
+                android:layout_height="70px"
+                android:layout_weight="1"
+                android:background="@color/bg_light_gray"
+                android:text="残忍拒绝" />
+
+            <Button
+                android:id="@+id/btn_update"
+                style="@style/SocialNormalTxtGraySmall"
+                android:layout_width="0dp"
+                android:layout_height="70px"
+                android:layout_marginLeft="10px"
+                android:layout_weight="1"
+                android:background="@color/bg_light_gray"
+                android:text="立即更新" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

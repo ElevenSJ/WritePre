@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/rl_jizi_sousuo"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/et_word_txt"
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="@string/tip_input"
+            android:imeOptions="actionSearch"
+            android:maxLength="7"
+            android:singleLine="true"
+            android:textColorHint="@color/gray" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:src="@drawable/found_miaohong"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_jizi_sousuo"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="@drawable/social_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view_line"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50px"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RadioGroup
+            android:id="@+id/rgp_fonts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/rbtn_cs"
+                style="@style/radioButton_style"
+                android:text="@string/word_cs" />
+
+            <RadioButton
+                android:id="@+id/rbtn_xs"
+                style="@style/radioButton_style"
+                android:text="@string/word_xs" />
+
+            <RadioButton
+                android:id="@+id/rbtn_ks"
+                style="@style/radioButton_style"
+                android:text="@string/word_ks" />
+
+            <RadioButton
+                android:id="@+id/rbtn_ls"
+                style="@style/radioButton_style"
+                android:text="@string/word_ls" />
+
+            <RadioButton
+                android:id="@+id/rbtn_zs"
+                style="@style/radioButton_style"
+                android:text="@string/word_zs" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_writ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120px"
+            android:src="@drawable/bg_nave_btn_writ" />
+
+        <ImageView
+            android:id="@+id/iv_revo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:src="@drawable/bg_nave_btn_revo" />
+
+        <ImageView
+            android:id="@+id/iv_miaohong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:src="@drawable/found_miaohong" />
+    </LinearLayout>
+
+</RelativeLayout>

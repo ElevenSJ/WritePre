@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/SocialTitleCenterTxt"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="100px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="学院" />
+
+    <Button
+        android:id="@+id/bt_join"
+        android:text="@string/institution_join_in"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/social_red"
+        style="@style/SocialNormalTxtWhite"/>
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_title"
+        android:layout_above="@+id/bt_join"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:scrollingCache="false"
+        android:animationCache="false"
+        android:visibility="visible"
+        ptr:ptrMode="pullDownFromTop" />
+</RelativeLayout>

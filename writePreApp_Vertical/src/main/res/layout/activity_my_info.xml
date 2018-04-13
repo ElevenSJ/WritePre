@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+	<include layout="@layout/social_topbar_layout"/>
+    
+	<ScrollView
+	    android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:divider="@drawable/bg_line_gray_1"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:paddingLeft="30px" 
+            android:paddingRight="30px"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="头像"
+                    style="@style/SocialNormalTxtBlackMin"/>
+
+                <ImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="68px"
+                    android:layout_height="68px"
+                    android:layout_toLeftOf="@+id/btn_header"
+                    android:onClick="onClick"
+                    android:src="@drawable/icon_def_header" 
+                    android:layout_centerVertical="true"/>
+
+                <Button
+                    android:id="@+id/btn_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:onClick="onClick"
+                    android:drawableRight="@drawable/select"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="昵称"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="我辈岂是蓬蒿人" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="帐号"
+                    style="@style/SocialNormalTxtBlackMin"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/et_userno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:layout_alignParentRight="true"
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:text="123456" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="地区"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请选择地区" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="个人签名"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_brief"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入个人签名" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="@color/bg_light_gray"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓名"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_real_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入姓名" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="生日"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请选择生日" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="性别"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="男" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号码"
+                    style="@style/SocialNormalTxtBlackMin" />
+				<TextView
+                    android:id="@+id/tv_tel"
+        			android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_centerVertical="true"
+        			android:layout_marginRight="160px"
+        			android:background="@null"
+        			android:enabled="false"
+        			android:gravity="center"
+       				android:singleLine="true"
+       				style="@style/SocialNormalTxtGrayMin"
+                    android:layout_toLeftOf="@+id/btn_bind_tel"
+                    android:text="18936911940" />
+                <Button
+                    android:id="@+id/btn_bind_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="绑定手机" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="邮箱"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入邮箱" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="@color/bg_light_gray"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="喜欢的碑帖"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_beitie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入喜欢的碑帖" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="喜欢的书体"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_shuti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入喜欢的书体" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="兴趣爱好"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入兴趣爱好" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="职业"
+                    style="@style/SocialNormalTxtBlackMin" />
+
+                <Button
+                    android:id="@+id/btn_profession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/select"
+                    android:drawablePadding="10px"
+                    android:text="请输入职业" 
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:onClick="onClick"/>
+            </RelativeLayout>
+            
+        </LinearLayout>
+	</ScrollView>
+</LinearLayout>

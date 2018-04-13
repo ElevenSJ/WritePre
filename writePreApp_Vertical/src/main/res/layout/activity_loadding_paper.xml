@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/top"
+        android:max="100" />
+
+    <RelativeLayout
+        android:id="@+id/rel_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_start"
+        android:layout_below="@+id/progress_bar">
+
+
+        <com.easier.writepre.widget.CircleLevelProgress
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <com.tencent.smtt.sdk.WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_desc" />
+    </RelativeLayout>
+
+    <com.easier.writepre.widget.WaveLoadingView
+        android:id="@+id/wv_progress"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:wlv_borderColor="@color/social_red"
+        app:wlv_titleBottomColor="@color/white"
+        app:wlv_titleBottomSize="@dimen/text_size_5"
+        app:wlv_titleCenterColor="@color/white"
+        app:wlv_titleCenterSize="@dimen/text_size_5"
+        app:wlv_titleCenterStrokeColor="@color/text_gray"
+        app:wlv_waveColor="@color/social_red" />
+
+    <Button
+        android:id="@+id/bt_start"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/social_red"
+        android:text="开始考试" />
+</RelativeLayout>

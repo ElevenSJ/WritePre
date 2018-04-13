@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    android:orientation="vertical" >
+	<include layout="@layout/social_topbar_layout"/>
+	
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30px"
+        >
+        
+        <LinearLayout 
+		    android:id="@+id/ll_tips"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_alignParentBottom="true"
+		    android:layout_marginTop="50px"
+		    android:layout_marginBottom="50px"
+		    >
+	    	<TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    style="@style/SocialNormalTxtGrayMin"
+			    android:text="小贴士:"/>
+			<TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    style="@style/SocialNormalTxtGrayMin"
+			    android:text="感谢你对写字派一直以来的支持"/>
+			<TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    style="@style/SocialNormalTxtGrayMin"
+			    android:text="您的建议我们会及时采纳"/>
+		</LinearLayout>
+		<View 
+		    android:id="@+id/v_line"
+		    android:layout_width="match_parent"
+		    android:layout_height="1px"
+		    android:background="@color/text_gray"
+		    android:layout_above="@+id/ll_tips"
+		    />
+        <EditText
+            android:id="@+id/et_content"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:hint="您好，请填写您的宝贵意见"
+		    style="@style/SocialNormalTxtBlackMin"
+		    android:textColorHint="@color/text_gray"
+		    android:background="@color/bg_light_gray"
+		    android:gravity="top"
+		    android:layout_above="@+id/v_line"
+	    />
+    </RelativeLayout>
+	
+	
+</LinearLayout>

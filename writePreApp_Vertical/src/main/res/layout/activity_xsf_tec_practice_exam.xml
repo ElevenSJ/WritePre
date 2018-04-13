@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    tools:context="com.easier.writepre.ui.XsfTecPracticeExamActivity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:drawableLeft="@drawable/clock_icon"
+            android:drawablePadding="10px"
+            android:text="倒计时:" />
+
+        <com.easier.writepre.widget.CountDownChronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:paddingTop="5px"
+            android:layout_toRightOf="@id/tv_time"
+            android:layout_centerVertical="true"
+            android:textSize="26px"
+            android:textColor="@color/social_red" />
+
+        <TextView
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="实践考试" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            style="@style/SocialTitleRightTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:gravity="center"
+            android:text="交卷" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/social_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_pre"
+            style="@style/SocialNormalTxtWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1px"
+            android:layout_weight="1"
+            android:background="@color/social_red"
+            android:text="上一题"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/SocialNormalTxtWhite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/social_red"
+            android:text="下一题" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_button"
+        android:background="@color/bg_gray"
+        android:layout_below="@id/title">
+
+        <com.easier.writepre.widget.NoPreloadViewPager
+            android:id="@+id/answerViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+</RelativeLayout>

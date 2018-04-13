@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="15px"
+                android:paddingTop="15px"
+                android:text="全部"
+                android:textColor="@drawable/text_red_selector" />
+
+
+            <RadioButton
+                android:id="@+id/rb_teacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawableLeft="@drawable/vertical_bar"
+                android:drawableRight="@drawable/vertical_bar"
+                android:gravity="center"
+                android:paddingBottom="15px"
+                android:paddingTop="15px"
+                android:text="老师"
+                android:textColor="@drawable/text_red_selector" />
+
+
+            <RadioButton
+                android:id="@+id/rb_samecity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="15px"
+                android:paddingTop="15px"
+                android:text="同城"
+                android:textColor="@drawable/text_red_selector" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_all_select"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_selector"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <RadioButton
+                android:id="@+id/rb_teacher_select"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_selector"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <RadioButton
+                android:id="@+id/rb_samecity_select"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/rb_selector"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <com.easier.writepre.widget.ClearEditText
+        android:id="@+id/et_search"
+        style="@style/SocialNormalTxtGray"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/shape_circle_button_gray"
+        android:drawableLeft="@drawable/wb_search_icon"
+        android:drawablePadding="20px"
+        android:gravity="center_vertical"
+        android:hint="找朋友/找老师..."
+        android:imeOptions="actionSearch"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:singleLine="true"
+        android:textColorHint="#999999"
+        android:textSize="26px" />
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/white"
+        android:divider="@drawable/social_line"
+        android:dividerHeight="1px"
+        android:dividerPadding="20px"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible"
+        ptr:ptrMode="both" />
+
+</LinearLayout>

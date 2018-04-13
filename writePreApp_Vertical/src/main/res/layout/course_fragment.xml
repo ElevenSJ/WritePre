@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/white"
+        android:childDivider="@drawable/social_line"
+        android:childIndicator="@null"
+        android:divider="@drawable/social_line"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:groupIndicator="@null"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible"
+        ptr:ptrMode="disabled" />
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/banner_height"
+        android:background="@color/bg_gray"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30px"
+            android:background="@color/white"
+            android:padding="20px" >
+
+            <LinearLayout
+                android:id="@+id/tv_create_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20px"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:gravity="center_vertical"
+                    android:text="@string/tv_add_course_string" />
+
+                <ImageView
+                    android:layout_width="25px"
+                    android:layout_height="25px"
+                    android:src="@drawable/add_circle"
+                    android:layout_marginLeft="20px"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_create_course"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/class_cover" />
+
+                <ImageView
+                    android:id="@+id/play_video"
+                    android:layout_width="150px"
+                    android:layout_height="150px"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/video_player_icon" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/banner_height"
+        android:background="@color/bg_gray"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30px"
+            android:background="@color/white"
+            android:padding="20px" >
+
+            <TextView
+                android:id="@+id/tv_login"
+                style="@style/SocialNormalTxtRedSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:padding="20px"
+                android:text="@string/tv_no_login" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

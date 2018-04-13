@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.easier.writepre.widget.SquareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/album_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/album_image_max_height"
+        android:maxWidth="@dimen/album_image_max_width"
+        android:minHeight="@dimen/album_image_min_size"
+        android:minWidth="@dimen/album_image_min_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gray"/>
+
+</com.easier.writepre.widget.SquareLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rel_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="fill_parent"
+            android:layout_height="280px"
+            android:layout_margin="20px"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="说点什么吧...(最多140字哦)"
+            android:textColorHint="#999"></EditText>
+
+        <RelativeLayout
+            android:id="@+id/rel_tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_content"
+            android:layout_margin="20px">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还可以输入" />
+
+                <TextView
+                    android:id="@+id/tv_input_left"
+                    style="@style/SocialNormalTxtRedMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="140" />
+
+                <TextView
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个字" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rel_et"
+        android:background="@drawable/social_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/SocialNormalTxtRedMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:text="位置" />
+
+        <Button
+            android:id="@+id/btn_showlocation"
+            style="@style/SocialNormalTxtGraySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/shape2"
+            android:padding="20px"
+            android:text="显示地理位置" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/social_line" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_file_tag"
+        style="@style/SocialNormalTxtRedMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_city"
+        android:layout_margin="20px"
+        android:text="图片"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_images_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_btn"
+        android:layout_below="@+id/txt_file_tag"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/transparent"
+        android:dividerHeight="10px"
+        android:fadingEdge="none"
+        android:layout_margin="15px"
+        android:fastScrollEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_btn"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/social_red"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="25px"
+        android:textSize="30px" />
+
+</RelativeLayout>

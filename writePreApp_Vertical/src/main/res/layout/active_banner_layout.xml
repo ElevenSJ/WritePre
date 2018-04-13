@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_gray"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="20px"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SocialNormalTxtBlackSmall"
+        android:padding="10px"
+        android:text="标题"
+        android:background="@color/white"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/active_banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fresco:placeholderImage="@drawable/empty_photo"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/empty_photo"
+        fresco:failureImageScaleType="centerCrop"
+        />
+
+    <RelativeLayout
+        android:id="@+id/des_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/desc"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/SocialNormalTxtGraySmall"
+            android:padding="10px"
+            android:maxLines="4"
+            android:text="活动详情"
+            />
+        <ImageView
+            android:id="@+id/drop_img"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:padding="10px"
+            android:layout_marginTop="5px"
+            android:src="@drawable/arrow_down"
+            android:scaleType="fitCenter"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/desc"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

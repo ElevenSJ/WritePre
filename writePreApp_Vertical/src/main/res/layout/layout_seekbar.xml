@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/seek_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="#D5D5D5"
+    android:orientation="vertical"
+    android:padding="20px" >
+
+    <LinearLayout
+        android:id="@+id/alpha_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/alpha_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="照片透明度"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25px" />
+
+        <SeekBar
+            android:id="@+id/alpha_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingLeft="15px"
+            android:paddingRight="15px"
+            android:progressDrawable="@drawable/seekbar_po"
+            android:thumb="@drawable/seekbar_thumb" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rotate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/rotate_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="照片旋转度"
+            android:textColor="@android:color/background_dark"
+            android:textSize="25px" />
+
+        <SeekBar
+            android:id="@+id/rotate_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingLeft="15px"
+            android:paddingRight="15px"
+            android:progressDrawable="@drawable/seekbar_po"
+            android:thumb="@drawable/seekbar_thumb" />
+    </LinearLayout>
+
+</LinearLayout>

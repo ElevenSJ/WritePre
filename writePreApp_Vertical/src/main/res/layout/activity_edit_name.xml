@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/social_topbar_layout"/>
+	<EditText 
+	    android:id="@+id/et_name"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/topic_edittext_background"
+	    android:hint="请输入昵称（8字以内）"
+	    android:padding="10px"
+	    android:singleLine="true"
+	    style="@style/SocialNormalTxtBlackSmall"
+	    android:textColorHint="@color/text_color_gray_3"
+	    />
+</LinearLayout>

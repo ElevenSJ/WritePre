@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@drawable/go_back" />
+
+        <TextView
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="作品搜索"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_5"
+        android:padding="10px">
+
+        <com.easier.writepre.widget.ClearEditText
+            android:id="@+id/et_search"
+            android:layout_width="fill_parent"
+            android:layout_height="80px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/cityhot_edittext_bg"
+            android:drawableLeft="@drawable/wb_search_icon"
+            android:drawablePadding="5dp"
+            android:hint="作品编号、参会者昵称"
+            android:imeOptions="actionSearch"
+            android:maxLength="8"
+            android:padding="10px"
+            android:singleLine="true"
+            android:textSize="15.0dip"></com.easier.writepre.widget.ClearEditText>
+
+        <Button
+            android:id="@+id/btn_search"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/et_search"
+            android:layout_marginRight="10px"
+            android:background="@drawable/topic_send_comment_button"
+            android:padding="10px"
+            android:text="搜索"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list_pk_teacher_student_search"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/white"
+        android:divider="@color/transparent"
+        android:dividerHeight="10dip"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="@color/transparent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        ptr:ptrMode="both" />
+
+</LinearLayout>

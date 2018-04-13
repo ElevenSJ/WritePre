@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10px"
+        >
+        <ImageView 
+            android:id="@+id/img_face"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:src="@drawable/empty_photo"
+            android:layout_marginRight="10px"
+            />
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView 
+		            android:id="@+id/tv_title"
+		            android:layout_width="400px"
+		            android:layout_height="wrap_content"
+		            android:text="新闻标题"
+		            android:singleLine="true"
+		            style="@style/SocialNormalTxtBlack"
+            		/>
+                <TextView 
+                    android:id="@+id/tv_ctime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="创建时间"
+                    style="@style/SocialNormalTxtGraySmall"
+                    />
+            </RelativeLayout>
+            <TextView 
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="新闻描述"
+                android:layout_marginTop="10px"
+                style="@style/SocialNormalTxtGraySmall"
+                />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

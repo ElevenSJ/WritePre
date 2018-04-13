@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_icon"
+        android:layout_width="99px"
+        android:layout_height="99px"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="19px"
+        android:layout_marginTop="30px"
+        android:scaleType="centerCrop"
+        fresco:failureImage="@drawable/empty_photo"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/empty_photo"
+        fresco:placeholderImageScaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/layout_notify_num"
+        android:layout_width="35px"
+        android:layout_height="35px"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/img_icon"
+        android:layout_marginRight="-15px"
+        android:layout_marginTop="15px"
+        android:background="@drawable/circle_red_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3px"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_notify_num"
+            style="@style/SocialNormalTxtWhiteMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_icon"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="19px"
+        android:layout_toRightOf="@+id/img_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圈子名稱" />
+
+            <TextView
+                android:id="@+id/tv_num"
+                style="@style/SocialNormalTxtGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_name"
+                android:layout_marginLeft="15px"
+                android:gravity="center"
+                android:text="（0人）" />
+
+            <ImageView
+                android:id="@+id/tv_type"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_marginLeft="15px"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_num"
+                android:src="@drawable/icon_circle_create"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_tag"
+                style="@style/SocialNormalTxtRedMin"
+                android:layout_width="wrap_content"
+                android:layout_height="30px"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_circle_button_red"
+                android:gravity="center"
+                android:paddingLeft="8px"
+                android:paddingRight="8px"
+                android:enabled="false"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_is_open"
+                style="@style/SocialNormalTxtRedMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="公开" />
+
+            <TextView
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_is_open"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/post_info"
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text=" 帖" />
+
+            <TextView
+                android:id="@+id/tv_post_num"
+                style="@style/SocialNormalTxtRedMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/post_info"
+                android:gravity="center"
+                android:text="0" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignLeft="@+id/layout_detail"
+        android:layout_below="@+id/layout_detail"
+        android:layout_marginTop="19px"
+        android:background="@drawable/social_line" />
+
+</RelativeLayout>

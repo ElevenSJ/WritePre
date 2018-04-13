@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/drop_box"
+	android:paddingTop="17dp"
+	android:scrollbars="none">
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btn_style_0"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_1" />
+
+		<Button
+			android:id="@+id/btn_style_1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_2" />
+
+		<Button
+			android:id="@+id/btn_style_2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_3" />
+
+		<Button
+			android:id="@+id/btn_style_3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_4" />
+
+		<Button
+			android:id="@+id/btn_style_4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_5" />
+
+		<Button
+			android:id="@+id/btn_style_5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_6" />
+
+		<Button
+			android:id="@+id/btn_style_6"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_7" />
+		<Button
+			android:id="@+id/btn_style_7"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_8" />
+		<Button
+			android:id="@+id/btn_style_8"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_9" />
+		<Button
+			android:id="@+id/btn_style_9"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_10" />
+		<Button
+			android:id="@+id/btn_style_10"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:textSize="18sp"
+			android:background="@null"
+			android:text="@string/video_style_11" />
+
+	</LinearLayout>
+</HorizontalScrollView>

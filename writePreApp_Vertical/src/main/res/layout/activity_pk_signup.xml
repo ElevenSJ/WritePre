@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 内容详情区域 -->
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/social_topbar_layout" />
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20px" >
+
+        <TextView
+            android:id="@+id/tv_next"
+            style="@style/SocialNormalTxtWhite"
+            android:layout_width="600px"
+            android:layout_height="90px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_rectangle_red"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="报名"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_above="@+id/layout_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="参会信息" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/SocialNormalTxtBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:text="仅供主办方与您联系本次参会事宜，不对第三方公开" />
+
+            <TextView
+                style="@style/SocialNormalTxtBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="参会信息非常重要！" />
+
+            <TextView
+                style="@style/SocialNormalTxtBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:text="以下信息如有错误，请点击直接修改" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:layout_marginTop="10px"
+                android:background="@color/bg_gray" />
+
+            <com.easier.writepre.widget.NoScrollListView
+                android:id="@+id/lv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@color/bg_gray"
+                android:dividerHeight="1px"
+                android:fadeScrollbars="false"
+                android:scrollbarFadeDuration="0" >
+            </com.easier.writepre.widget.NoScrollListView>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

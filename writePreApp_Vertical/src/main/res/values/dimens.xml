@@ -1,0 +1,69 @@
+<resources>
+    <!--SWITCH-->
+    <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
+    <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_top">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_bottom">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 自动布局设计图宽高 -->
+    <dimen name="design_width">750px</dimen>
+    <dimen name="design_height">1334px</dimen>
+
+    <!-- banner宽高3：1 -->
+    <dimen name="banner_width">750px</dimen>
+    <dimen name="banner_height">250px</dimen>
+    <dimen name="album_image_min_size">150px</dimen>
+    <dimen name="album_image_max_height">382px</dimen>
+    <dimen name="album_image_max_width">510px</dimen>
+    <dimen name="image_view_margin_min_width">50dp</dimen>
+    <dimen name="image_view_margin_width">150dp</dimen>
+    <dimen name="image_view_more_margin_width">120dp</dimen>
+    <dimen name="notify_num_bt_size">15dp</dimen>
+    <dimen name="miaohong_bg">650px</dimen>
+
+    <!-- start 发现 -->
+    <dimen name="img_word_size">260px</dimen>
+    <dimen name="jizi_thumbnail_size">300px</dimen>
+    <!-- end发现 -->
+
+
+    <!-- 大赛作品宽高 -->
+    <dimen name="work_width">730px</dimen>
+    <dimen name="work_height">446px</dimen>
+
+    <!-- v展作品高 -->
+    <dimen name="v_show_height">350px</dimen>
+
+    <!-- 临写大会首页,大会视频、教师专区、学生专区高度 -->
+    <dimen name="pk_main_img_height">200px</dimen>
+    <dimen name="pk_main_name_margin_left">10px</dimen>
+
+    <!-- 知识库隐藏式抽屉弹出框 -->
+    <dimen name="drawer_width">240dp</dimen>
+
+    <!-- dialog的宽度 -->
+    <dimen name="dialog_width">450px</dimen>
+    <dimen name="dialog_et_width">180px</dimen>
+
+
+    <dimen name="beitie_face_height">380px</dimen>
+
+    <!-- 微展书法家图片高度 -->
+    <dimen name="micro_exhibition_img_height">300px</dimen>
+
+    <!-- 登录输入框离左右屏幕距离 -->
+    <dimen name="login_input_box_distance">90px</dimen>
+    <!-- 登录button离右屏幕距离 -->
+    <dimen name="login_button_distance">130px</dimen>
+    <!-- 注册界面离上方距离 -->
+    <dimen name="login_top_distance">228px</dimen>
+    <!-- 全局共用距离 -->
+    <dimen name="distance20px">20px</dimen>
+    <dimen name="distance36px">36px</dimen>
+    <dimen name="distance126px">126px</dimen>
+
+</resources>

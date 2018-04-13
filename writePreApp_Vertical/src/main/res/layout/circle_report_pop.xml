@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/topic_report"
+    android:orientation="vertical"
+    android:padding="10px" >
+    <LinearLayout
+        android:id="@+id/layout_item1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10px"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/bt1"
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_marginTop="10px"
+            android:layout_width="170px"
+            android:layout_height="50px"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="举报" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10px"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="170px"
+            android:layout_height="1px"
+            android:background="@drawable/social_line" />
+
+        <Button
+            android:id="@+id/bt2"
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_width="170px"
+            android:layout_marginTop="10px"
+            android:layout_height="50px"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_item3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10px"
+        android:orientation="vertical"
+        android:paddingBottom="10px"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="170px"
+            android:layout_height="1px"
+            android:background="@drawable/social_line" />
+
+        <Button
+            android:id="@+id/bt3"
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_width="170px"
+            android:layout_marginTop="10px"
+            android:layout_height="50px"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text=""
+            />
+    </LinearLayout>
+
+</LinearLayout>

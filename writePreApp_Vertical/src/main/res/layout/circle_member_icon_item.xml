@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <com.easier.writepre.widget.RoundImageView
+        android:id="@+id/imgHead"
+        android:layout_width="70px"
+        android:layout_centerHorizontal="true"
+        android:layout_height="70px"
+        />
+
+    <TextView
+        android:id="@+id/tv_circle_user"
+        style="@style/SocialNormalTxtWhiteleast"
+        android:layout_width="80px"
+        android:layout_height="25px"
+        android:layout_alignBottom="@+id/imgHead"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bookmark"
+        android:gravity="center"
+        android:text="圈主"
+        android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="20px"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

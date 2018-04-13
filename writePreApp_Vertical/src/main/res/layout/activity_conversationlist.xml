@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onTopLeftClick"
+            android:padding="25px"
+            android:scaleType="centerInside"
+            android:src="@drawable/go_back" />
+
+        <ImageView
+            android:id="@+id/top_left_finish"
+            style="@style/SocialTitleRightTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/img_back"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onTopLeftTextClick"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_close"
+            android:visibility="gone" />
+
+        <com.easier.writepre.widget.ScrollAlwaysTextView
+            android:id="@+id/top_title"
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/top_right"
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="5px"
+            android:clickable="true"
+            android:onClick="onFriendsClick"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/social_line"
+        />
+    <fragment
+        android:id="@+id/conversationlist"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

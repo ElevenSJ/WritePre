@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <com.easier.writepre.widget.CustomScrollView
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100px"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/course_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        fresco:failureImage="@drawable/empty_photo"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/empty_photo"
+                        fresco:placeholderImageScaleType="fitXY"/>
+
+                    <ImageView
+                        android:id="@+id/play_video"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:visibility="gone"
+                        android:src="@drawable/video_player_icon" />
+
+                </RelativeLayout>
+
+                <!--存放播放视频的fragment-->
+                <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/video_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/black"
+                    android:visibility="gone">
+
+
+                    <com.easier.writepre.video.universalvideoview.UniversalVideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:background="@android:color/black"
+                        app:uvv_autoRotation="false"
+                        app:uvv_fitXY="false" />
+
+                    <com.easier.writepre.video.universalvideoview.UniversalMediaController
+                        android:id="@+id/media_controller"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        app:uvv_scalable="true" />
+
+                </FrameLayout>
+            </FrameLayout>
+
+
+            <com.easier.writepre.widget.TabIndicator
+                android:id="@+id/main_tab_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:fitsSystemWindows="true"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <com.easier.writepre.widget.MainViewPager
+                android:id="@+id/course_main_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </com.easier.writepre.widget.CustomScrollView>
+
+
+</RelativeLayout>

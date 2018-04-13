@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100px"
+    android:background="@color/title_bg">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="onTopLeftClick"
+        android:padding="25px"
+        android:scaleType="centerInside"
+        android:src="@drawable/go_back" />
+
+    <ImageView
+        android:id="@+id/top_left_finish"
+        style="@style/SocialTitleRightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20px"
+        android:layout_toRightOf="@+id/img_back"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onTopLeftTextClick"
+        android:scaleType="centerInside"
+        android:src="@drawable/top_close"
+        android:visibility="gone" />
+
+    <com.easier.writepre.widget.ScrollAlwaysTextView
+        android:id="@+id/top_title"
+        style="@style/SocialTitleCenterTxt"
+        android:layout_width="550px"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/top_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:onClick="onTopRightClick"
+        android:padding="30px"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/top_right_txt"
+        style="@style/SocialTitleRightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30px"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onTopRightTxtClick"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/notice_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/top_title"
+        android:layout_marginRight="100px"
+        android:src="@drawable/icon_red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/top_right_txt1"
+        style="@style/SocialTitleRightTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20px"
+        android:layout_toLeftOf="@+id/top_right_txt"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onTopRightTxtClick1"
+        android:text="BBB"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/social_line" />
+
+    <ImageView
+        android:id="@+id/notify_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/top_title"
+        android:layout_marginRight="25px"
+        android:src="@drawable/icon_red"
+        android:visibility="gone" />
+
+</RelativeLayout>

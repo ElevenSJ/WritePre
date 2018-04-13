@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_video_icon"
+                android:layout_width="65px"
+                android:layout_height="65px"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/video_player_icon" />
+
+            <ImageView
+                android:id="@+id/iv_video_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/pk_main_img_height"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty_photo" />
+
+            <TextView
+                android:id="@+id/tv_video_name"
+                style="@style/SocialNormalTxtWhiteSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="50px"
+                android:layout_below="@id/iv_video_bg"
+                android:layout_marginTop="-50px"
+
+                android:gravity="center"
+                android:text="" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-40px"
+            android:orientation="horizontal" >
+
+            <com.easier.writepre.widget.RoundImageView
+                android:id="@+id/iv_teacher_student_head"
+                android:layout_width="65px"
+                android:layout_height="65px"
+                android:layout_marginLeft="20px"/>
+
+            <TextView
+                android:id="@+id/tv_teacher_student_name"
+                style="@style/SocialNormalTxtBlackSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/pk_main_name_margin_left"
+                android:layout_marginTop="40px"
+                android:gravity="left" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewArea"
+        android:onClick="onClick"
+        android:padding="20px"
+        android:src="@drawable/left_compare_icon" />
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/viewArea"
+        android:onClick="onClick"
+        android:padding="20px"
+        android:src="@drawable/delete_rectangle" />
+
+    <com.easier.writepre.widget.FloatViewGroup
+        android:id="@+id/viewArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/seek_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCD5D5D5"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="20px" >
+
+        <LinearLayout
+            android:id="@+id/alpha_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/alpha_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="照片透明度"
+                android:textColor="@android:color/background_dark"
+                android:textSize="25px" />
+
+            <SeekBar
+                android:id="@+id/alpha_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingLeft="15px"
+                android:paddingRight="15px"
+                android:progressDrawable="@drawable/seekbar_po"
+                android:thumb="@drawable/seekbar_thumb" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rotate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/rotate_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="照片旋转度"
+                android:textColor="@android:color/background_dark"
+                android:textSize="25px" />
+
+            <SeekBar
+                android:id="@+id/rotate_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:paddingLeft="15px"
+                android:paddingRight="15px"
+                android:progressDrawable="@drawable/seekbar_po"
+                android:thumb="@drawable/seekbar_thumb" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

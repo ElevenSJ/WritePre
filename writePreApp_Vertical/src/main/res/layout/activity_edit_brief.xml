@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/social_topbar_layout"/>
+	<EditText 
+	    android:id="@+id/et_name"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/topic_edittext_background"
+	    android:hint="请输入简介(50个字以内)"
+	    android:padding="10px"
+	    android:maxLength="50"
+	    style="@style/SocialNormalTxtBlackSmall"
+	    android:textColorHint="@color/text_color_gray_3"
+	    />
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    
+	    >
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            >
+            <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="还可以输入"
+		        style="@style/SocialNormalTxtBlackMin" />
+            <TextView 
+                android:id="@+id/tv_input_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                style="@style/SocialNormalTxtRedMin"
+				/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个字"
+                style="@style/SocialNormalTxtBlackMin"
+                />
+        </LinearLayout>
+	    
+	</RelativeLayout>
+</LinearLayout>

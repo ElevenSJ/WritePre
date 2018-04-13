@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!-- 内容详情区域 -->
+	<include
+        android:id="@+id/rl_title"
+        layout="@layout/social_topbar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:orientation="vertical"
+            android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:orientation="vertical"
+                android:padding="10px" >
+
+                <TextView
+                    style="@style/SocialNormalTxtBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.大会组别" />
+
+                <TextView
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15px"
+                    android:text="选择参会专区。为保证您的大会正常进行，请正确选择您的参会专区，若大会核对资料中发现身份与专区不匹配会取消晋级资格" />
+            </LinearLayout>
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/video_detail_series_gridview_sq"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46px"
+                android:background="#f6f6f6"
+                android:orientation="vertical"
+                android:padding="10px" >
+
+                <TextView
+                    style="@style/SocialNormalTxtBlackSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.大会专区" />
+
+                <TextView
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15px"
+                    android:text="确定作品主题。大会评委将以参会主题为基准进行评分。请观摩指导视频，谨慎确认。如作品与主题不符会影响您的成绩。主题一经提交将无法修改。（注教学论文专属教师专区，千字文主题为硬笔主题，专属学生专区。）" />
+            </LinearLayout>
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/video_detail_series_gridview_zq"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:paddingBottom="60dp"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#d4d4d4"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/tv_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            
+            android:text="您还没有选择任何组别"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tv_selected_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#c60000"
+           
+            android:padding="5dp"
+            android:text="学生专区"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_selected_work"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="#c60000"
+          
+            android:padding="5dp"
+            android:text="九成宫醴泉碑"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

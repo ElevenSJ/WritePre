@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25px"
+            android:text="评价" />
+
+        <RatingBar
+            android:id="@+id/user_ratingBar"
+            style="@style/RatingBar_Full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5px"
+            android:max="5"
+            android:rating="0"
+            android:stepSize="1" />
+
+        <EditText
+            android:id="@+id/pl_edit"
+            style="@style/SocialNormalTxtGraySmall"
+            android:layout_width="match_parent"
+            android:layout_height="250px"
+            android:layout_below="@+id/user_ratingBar"
+            android:background="@drawable/social_line"
+            android:gravity="left|top"
+            android:hint="请给予您的评论(300字以内)"
+            android:maxLength="300"
+            android:padding="20px" />
+
+        <Button
+            android:id="@+id/ok_bt"
+            style="@style/SocialNormalTxtBlue"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_below="@+id/pl_edit"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/indicator_bg" />
+    </RelativeLayout>
+
+
+</LinearLayout>

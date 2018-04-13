@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d4d4d4" >
+
+    <com.youku.player.base.YoukuPlayerView
+        android:id="@+id/full_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </com.youku.player.base.YoukuPlayerView>
+
+    <!--
+         <ListView
+        android:id="@+id/lv_comment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/full_holder">
+    </ListView>
+    -->
+
+    <View
+        android:id="@+id/line_v"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/full_holder" />
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/line_v"
+        android:layout_margin="5dp"
+        android:cacheColorHint="@color/white"
+        android:divider="@drawable/social_line"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="15px"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_send_comment"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_circle_button_gray"
+            android:gravity="center"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:text="发送"
+            android:textColor="#333" />
+
+        <EditText
+            android:id="@+id/et_input_comment"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="60px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="15px"
+            android:layout_toLeftOf="@+id/btn_send_comment"
+            android:background="@drawable/shape_circle_button_gray"
+            android:gravity="center_vertical"
+            android:hint="对这个帖子说点什么吧(限300字)"
+            android:maxLength="300"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:textColorHint="#ccc" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20px">
+
+
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20px">
+
+        <TextView
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评价该课程" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RatingBar_Full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:max="5"
+            android:rating="0"
+            android:stepSize="1.0" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/bg_light_gray"
+        android:padding="20px">
+
+        <TextView
+            style="@style/SocialNormalTxtBlackSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="综合评价" />
+
+        <RatingBar
+            android:id="@+id/ratingBar_info"
+            style="@style/RatingBar_Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:max="5"
+            android:rating="5" />
+
+        <TextView
+            android:id="@+id/pl_num"
+            style="@style/SocialNormalTxtGrayMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@+id/ratingBar_info"
+            android:text="(0份评价)" />
+
+    </RelativeLayout>
+
+</LinearLayout>

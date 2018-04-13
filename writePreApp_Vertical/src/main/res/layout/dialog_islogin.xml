@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/corners_white_bg">
+    <RelativeLayout 
+        android:layout_width="450px"
+        android:layout_height="160px"
+        >
+         <TextView 
+	        android:id="@+id/tv_login_now"
+	        style="@style/SocialNormalTxtBlack"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="请先登录"
+	        android:layout_centerInParent="true"
+        	/>
+	</RelativeLayout>
+   
+    <ImageView 
+        android:id="@+id/img_horizontal_line"
+        android:layout_width="450px"
+        android:layout_height="1px"
+        android:background="#d4d4d4"
+        />
+    <LinearLayout 
+        android:layout_width="450px"
+        android:layout_height="80px"
+        >
+        <TextView 
+	        android:id="@+id/tv_login"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:text="确定"
+	        style="@style/SocialNormalTxtRed"
+	        android:gravity="center"
+	        />
+	    <ImageView 
+	        android:id="@+id/img_vertical_line"
+	        android:layout_width="1dp"
+	        android:layout_height="match_parent"
+	        android:background="#d4d4d4"
+	        android:layout_centerInParent="true"
+	        />
+	    <TextView 
+	        android:id="@+id/tv_cancel"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1"
+	        android:text="取消"
+	        android:gravity="center"
+	        style="@style/SocialNormalTxtBlack"
+	        />
+    </LinearLayout>
+    
+	
+</LinearLayout>

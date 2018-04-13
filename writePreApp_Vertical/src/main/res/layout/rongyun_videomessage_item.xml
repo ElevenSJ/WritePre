@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.rong.imkit.widget.RCMessageFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <io.rong.imkit.widget.AsyncImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        app:RCMask="true"
+        app:RCMinShortSideSize="120dp" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/tudou_details_big_play_icon" />
+
+    <TextView
+        android:id="@+id/tv_download_msg"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="#75000000"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:visibility="gone" />
+</io.rong.imkit.widget.RCMessageFrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="jizi_thumbnail_size">200px</dimen>
+    <dimen name="img_word_size">170px</dimen>
+
+    <dimen name="beitie_face_height">280px</dimen>
+
+</resources>

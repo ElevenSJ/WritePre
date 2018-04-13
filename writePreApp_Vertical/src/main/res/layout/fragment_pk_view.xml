@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top">
+
+        <RelativeLayout
+            android:id="@+id/rl_sc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/kanner"
+                    android:layout_width="@dimen/banner_width"
+                    android:layout_height="@dimen/banner_height"
+                    android:background="@color/white">
+
+                    <com.easier.writepre.widget.ChildViewPager
+                        android:id="@+id/banner_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <com.easier.writepre.widget.ViewPageIndicator
+                        android:id="@+id/banner_indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/transparent"
+                        android:padding="15px" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/kanner"
+                    android:padding="10px"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_new1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bt_notice1"
+                            style="@style/SocialNormalTxtWhiteMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corners_red_bg"
+                            android:text="公  告" />
+
+                        <TextView
+                            android:id="@+id/tv_news_title1"
+                            style="@style/SocialNormalTxtBlackSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_new2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bt_notice2"
+                            style="@style/SocialNormalTxtWhiteMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corners_red_bg"
+                            android:text="公  告" />
+
+                        <TextView
+                            android:id="@+id/tv_news_title2"
+                            style="@style/SocialNormalTxtBlackSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_new3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bt_notice3"
+                            style="@style/SocialNormalTxtWhiteMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/corners_red_bg"
+                            android:text="公  告" />
+
+                        <TextView
+                            android:id="@+id/tv_news_title3"
+                            style="@style/SocialNormalTxtBlackSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_pk_stage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_top"
+                android:layout_marginTop="20px"
+                android:background="@color/white"
+                android:padding="10px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_stage_img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pk_teacher"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_pk_stage"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20px">
+
+                    <TextView
+                        android:id="@+id/tv_teacher_works"
+                        style="@style/SocialNormalTxtRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全部作品" />
+
+                    <ImageView
+                        android:id="@+id/img_teacher_works_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="10px"
+                        android:layout_toRightOf="@id/tv_teacher_works"
+                        android:src="@drawable/pk_works_status" />
+
+                    <TextView
+                        android:id="@+id/tv_teacher_works_status"
+                        style="@style/SocialNormalTxtRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_teacher_works_status" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_all_teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SocialNormalTxtGrayMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/arraw_right" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_teacher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:horizontalSpacing="10px"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="20px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pk_student"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pk_teacher"
+                android:layout_marginTop="20px"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20px">
+
+                    <TextView
+                        android:id="@+id/tv_student_works"
+                        style="@style/SocialNormalTxtRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人气作品" />
+
+                    <ImageView
+                        android:id="@+id/img_student_works_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="10px"
+                        android:layout_toRightOf="@id/tv_student_works"
+                        android:src="@drawable/pk_works_status" />
+
+                    <TextView
+                        android:id="@+id/tv_student_works_status"
+                        style="@style/SocialNormalTxtRed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/img_student_works_status" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_all_student"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SocialNormalTxtGrayMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/all" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/arraw_right" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_student"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:horizontalSpacing="10px"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="20px" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <com.easier.writepre.widget.PathButtonLayout
+        android:id="@+id/path_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="66px"
+        android:layout_marginRight="10px"></com.easier.writepre.widget.PathButtonLayout>
+
+</RelativeLayout>

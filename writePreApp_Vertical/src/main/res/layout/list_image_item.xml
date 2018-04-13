@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_img"
+            fresco:placeholderImage="@drawable/empty_photo"
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundWithOverlayColor="@color/white"
+            fresco:roundedCornerRadius="10dp"
+            fresco:roundingBorderColor="@color/bg_gray"
+            fresco:roundingBorderWidth="1px"
+            fresco:viewAspectRatio="3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10px"
+            android:src="@drawable/circle_clear_record" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:background="@drawable/rounded_rectangle_while_selector"
+        android:gravity="center"
+        android:padding="20px"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_add_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/add_circle" />
+
+        <TextView
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_add_tag"
+            android:paddingLeft="10px"
+            android:text="添加作业照片" />
+    </RelativeLayout>
+</RelativeLayout>

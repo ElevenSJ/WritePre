@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="selected_view" type="id"/>
+
+    <item name="prompt_parent_ll" type="id"/>
+    <item name="text_view_prompt" type="id"/>
+    <item name="my_progress_view" type="id"/>
+    
+</resources>

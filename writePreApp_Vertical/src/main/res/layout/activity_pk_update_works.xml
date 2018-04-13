@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/go_back" />
+
+        <TextView
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="参赛作品" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/social_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_signup_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.easier.writepre.widget.RoundImageView
+                android:id="@+id/iv_ts_head_info"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_ts_uname_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="莫凭蓝"
+                        android:textColor="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_guide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_ts_uname_info"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/right_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_ts_status_info"
+                        style="@style/SocialNormalTxtWhiteleast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_guide"
+                        android:background="@drawable/fillet_text_bg"
+                        android:text="初选" />
+
+                    <TextView
+                        android:id="@+id/tv_ts_teacher_info"
+                        style="@style/SocialNormalTxtWhiteleast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_ts_status_info"
+                        android:background="@drawable/fillet_text_bg"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/tv_ts_cata_title_info"
+                        style="@style/SocialNormalTxtWhiteleast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/tv_ts_teacher_info"
+                        android:background="@drawable/fillet_text_bg"
+                        android:text="史晨帖"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_works_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="NO：123456"
+            android:textColor="@color/social_red" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_send_works"
+        android:layout_below="@id/ll_signup_info"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DCDCDC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="添加图片（小贴士：最多可上传六张图片）"
+                android:textColor="#1ca3c5" />
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/gv_image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="10dp"></com.easier.writepre.widget.MyGridView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/social_line" />
+
+            <TextView
+                android:id="@+id/txt_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="添加视频（小贴士：初选为选填，复选、现场大会为必填）"
+                android:textColor="#1ca3c5" />
+
+            <RelativeLayout
+                android:id="@+id/rl_video_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20px">
+
+                <TextView
+                    android:id="@+id/tv_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#ff0000" />
+
+                <ImageView
+                    android:id="@+id/img_video_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/video_player_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_add_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_addpic_unfocused" />
+
+                <ImageView
+                    android:id="@+id/img_selected_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_addpic_unfocused"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/img_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/img_selected_video"
+                    android:src="@drawable/pk_works_pic_delete"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_send_works"
+        android:layout_width="600px"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10px"
+        android:background="@drawable/rounded_rectangle_red"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="提交作品"
+        android:textColor="@color/white"
+        android:textSize="30px" />
+
+</RelativeLayout>

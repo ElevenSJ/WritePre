@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <RelativeLayout
+        android:id="@+id/rl_sc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/kanner"
+                android:layout_width="@dimen/banner_width"
+                android:layout_height="@dimen/banner_height"
+                android:background="@color/white">
+
+                <com.easier.writepre.widget.ChildViewPager
+                    android:id="@+id/banner_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <com.easier.writepre.widget.ViewPageIndicator
+                    android:id="@+id/banner_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:padding="15px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_notice"
+                android:layout_width="fill_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/kanner"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/bt_notice"
+                    style="@style/SocialNormalTxtWhiteMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20px"
+                    android:background="@drawable/corners_red_bg"
+                    android:text="公  告" />
+
+                <TextView
+                    android:id="@+id/tv_news_title"
+                    style="@style/SocialNormalTxtWhiteSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/bt_notice"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_pk_stage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top"
+            android:layout_marginTop="20px"
+            android:background="@color/white"
+            android:padding="10px"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_stage_img"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pk_video"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_pk_stage"
+            android:layout_marginTop="20px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <TextView
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_double" />
+
+                <LinearLayout
+                    android:id="@+id/ll_all_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/SocialNormalTxtGrayMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arraw_right" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/gv_video"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:horizontalSpacing="10px"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pk_teacher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pk_video"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <TextView
+                    android:id="@+id/tv_teacher_works"
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teacher" />
+                <ImageView
+                    android:id="@+id/img_teacher_works_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_teacher_works"
+                    android:src="@drawable/pk_works_status"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_teacher_works_status"
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_teacher_works_status"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_all_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/SocialNormalTxtGrayMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arraw_right" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/gv_teacher"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:horizontalSpacing="10px"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pk_student"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pk_teacher"
+            android:layout_marginTop="20px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="20px">
+
+                <TextView
+                    android:id="@+id/tv_student_works"
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student" />
+                <ImageView
+                    android:id="@+id/img_student_works_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_student_works"
+                    android:src="@drawable/pk_works_status"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/tv_student_works_status"
+                    style="@style/SocialNormalTxtRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_student_works_status"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_all_student"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/SocialNormalTxtGrayMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arraw_right" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.easier.writepre.widget.MyGridView
+                android:id="@+id/gv_student"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:horizontalSpacing="10px"
+                android:listSelector="#00000000"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:scrollingCache="true"
+                android:verticalSpacing="20px"
+                android:paddingLeft="20px"
+                android:paddingRight="20px"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_recommend_works"
+            style="@style/SocialNormalTxtRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_pk_student"
+            android:layout_marginTop="20px"
+            android:background="@color/white"
+            android:padding="20px"
+            android:text="" />
+    </RelativeLayout>
+
+</RelativeLayout>

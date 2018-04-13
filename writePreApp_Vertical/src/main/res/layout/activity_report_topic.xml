@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical" >
+
+    <!-- 用户举报标题区域 -->
+
+    <include 
+        layout="@layout/social_topbar_layout"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+    <!-- 举报信息填写区域 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20px" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/et_input_report_content"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:layout_marginTop="16px"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:hint="您好，请填写您的宝贵意见"
+                    android:maxLength="140"
+                    android:textColorHint="#999" >
+                </EditText>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            style="@style/SocialNormalTxtGrayMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="还可以输入" />
+
+                        <TextView
+                            android:id="@+id/tv_input_left"
+                            style="@style/SocialNormalTxtRedMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="140" />
+
+                        <TextView
+                            style="@style/SocialNormalTxtGrayMin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个字" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@drawable/social_line" />
+
+                <RadioGroup
+                    android:id="@+id/rg_report_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/rb_false_information"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="虚假信息" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/social_line" />
+
+                    <RadioButton
+                        android:id="@+id/rb_induced_sharing_information"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="诱导分享信息" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/social_line" />
+
+                    <RadioButton
+                        android:id="@+id/rb_copyright_infringement"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="侵犯版权" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/social_line" />
+
+                    <RadioButton
+                        android:id="@+id/rb_pornography"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="黄赌毒" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/social_line" />
+
+                    <RadioButton
+                        android:id="@+id/rb_language_attack"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="语言人身攻击" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@drawable/social_line" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        style="@style/SocialNormalTxtBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:button="@null"
+                        android:drawableRight="@drawable/radiobutton_report_state"
+                        android:text="其它" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小贴士：" />
+
+                <TextView
+                    style="@style/SocialNormalTxtGraySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="根据问题的分类并且详细描述您所举报的问题，我们会快速为您解决，感谢您一直以来对写字派的支持" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

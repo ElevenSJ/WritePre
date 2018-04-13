@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.easier.writepre.widget.ScrollAlwaysTextView
+        android:id="@+id/class_title"
+        style="@style/SocialTitleCenterTxt"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_height="100px"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/class_title"
+        android:layout_margin="40px"
+        android:clipChildren="true"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:scrollingCache="false"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+</RelativeLayout>

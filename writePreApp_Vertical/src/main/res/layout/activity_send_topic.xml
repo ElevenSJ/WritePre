@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+
+    <EditText
+        android:id="@+id/et_content"
+        style="@style/SocialNormalTxtBlack"
+        android:layout_width="fill_parent"
+        android:layout_height="280px"
+        android:layout_margin="20px"
+        android:background="@null"
+        android:gravity="left|top"
+        android:hint="说点什么吧...(最多140字哦)"
+        android:textColorHint="#999"></EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还可以输入" />
+
+            <TextView
+                android:id="@+id/tv_input_left"
+                style="@style/SocialNormalTxtRedMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="140" />
+
+            <TextView
+                style="@style/SocialNormalTxtGrayMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个字" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SocialNormalTxtRedMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:text="位置" />
+
+        <Button
+            android:id="@+id/btn_showlocation"
+            style="@style/SocialNormalTxtGraySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/shape2"
+            android:padding="20px"
+            android:text="显示地理位置" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/social_line" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_file_tag"
+        style="@style/SocialNormalTxtRedMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:text="图片" />
+
+    <GridView
+        android:id="@+id/noScrollgridview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:listSelector="#00000000"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        android:verticalSpacing="10dp"></GridView>
+
+</LinearLayout>

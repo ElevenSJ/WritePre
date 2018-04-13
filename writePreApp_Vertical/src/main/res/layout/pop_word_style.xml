@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drop_box"
+    android:paddingTop="17dp"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/bg_line_gray"
+        android:orientation="vertical"
+        android:showDividers="middle" >
+
+        <Button
+            android:id="@+id/btn_style_0"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_0" />
+
+        <Button
+            android:id="@+id/btn_style_1"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_1" />
+
+        <Button
+            android:id="@+id/btn_style_2"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_2" />
+
+        <Button
+            android:id="@+id/btn_style_3"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_3" />
+
+        <Button
+            android:id="@+id/btn_style_4"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_4" />
+
+        <Button
+            android:id="@+id/btn_style_5"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_5" />
+
+        <Button
+            android:id="@+id/btn_style_6"
+            style="@style/jz_pop_style"
+            android:text="@string/word_style_6" />
+    </LinearLayout>
+
+</ScrollView>

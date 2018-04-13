@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/topic_report"
+    android:orientation="vertical"
+    android:padding="10px" >
+
+    <Button
+        android:id="@+id/btn_1"
+        style="@style/SocialNormalTxtBlackSmall"
+        android:layout_marginTop="10px"
+        android:layout_width="170px"
+        android:layout_height="50px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="修改昵称" />
+    <View
+        android:layout_width="170px"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+
+    <Button
+        android:id="@+id/btn_2"
+        style="@style/SocialNormalTxtBlackSmall"
+        android:layout_width="170px"
+        android:layout_marginTop="5px"
+        android:layout_height="50px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="设置管理员" />
+    <View
+        android:layout_width="170px"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+
+    <Button
+        android:id="@+id/btn_3"
+        style="@style/SocialNormalTxtBlackSmall"
+        android:layout_width="170px"
+        android:layout_marginTop="5px"
+        android:layout_height="50px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="删除" />
+
+</LinearLayout>

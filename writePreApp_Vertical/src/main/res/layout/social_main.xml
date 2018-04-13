@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="@color/title_bg"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/top_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20px"
+            android:paddingLeft="0px"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_notify_message"
+            android:visibility="gone" />
+        
+         <ImageView
+            android:id="@+id/notify_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5px"
+            android:layout_marginTop="25px"
+            android:src="@drawable/icon_red"
+            android:visibility="gone" />
+
+         <com.easier.writepre.widget.TabIndicator
+            android:id="@+id/main_tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:fitsSystemWindows="true"
+            android:layout_toLeftOf="@+id/top_right"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+    <!--com.easier.writepre.widget.MainViewPager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/social_main_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

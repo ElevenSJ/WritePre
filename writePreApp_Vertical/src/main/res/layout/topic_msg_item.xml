@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="10px"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    android:paddingTop="20px">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/square_iv_head"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        fresco:failureImage="@drawable/empty_head"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:placeholderImage="@drawable/empty_head"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundWithOverlayColor="@color/white"
+        fresco:roundingBorderColor="@color/bg_gray"
+        fresco:roundingBorderWidth="1dp" />
+
+    <ImageView
+        android:id="@+id/teacher_icon"
+        android:layout_width="24px"
+        android:layout_height="24px"
+        android:layout_alignRight="@id/square_iv_head"
+        android:layout_alignTop="@+id/square_iv_head"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:background="@drawable/teacher_icon"/>
+
+    <ImageView
+        android:id="@+id/square_iv_share"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/share" />
+
+    <TextView
+        android:id="@+id/tv_uname"
+        style="@style/SocialNormalTxtBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:layout_toLeftOf="@+id/square_iv_share"
+        android:layout_toRightOf="@+id/square_iv_head"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_ctime"
+        style="@style/SocialNormalTxtGrayMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_uname"
+        android:layout_below="@id/square_iv_share"
+        android:layout_marginRight="10px"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_city"
+        style="@style/SocialNormalTxtGrayMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_ctime"
+        android:layout_marginLeft="15px"
+        android:layout_toRightOf="@+id/tv_ctime"
+        android:drawableLeft="@drawable/guide"
+        android:drawablePadding="10px"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tv_title2"
+        style="@style/SocialNormalTxtBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_uname"
+        android:layout_below="@id/tv_ctime"
+        android:layout_marginTop="8px"
+        android:autoLink="web"
+        android:lineSpacingExtra="5px"
+        android:text=""
+        android:textColorHighlight="@color/social_red"
+        android:textScaleX="1.0" />
+
+    <com.easier.writepre.widget.NineGridView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_uname"
+        android:layout_below="@id/tv_title2"
+        android:layout_marginRight="100px"
+        android:layout_marginTop="10px"
+        app:ngv_gridSpacing="10px"
+        app:ngv_mode="fill" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_uname"
+        android:layout_below="@id/gridview"
+        android:layout_marginTop="10px"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_readCount"
+            style="@style/SocialNormalTxtGrayMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/eye_read"
+            android:drawablePadding="15px"
+            android:gravity="center_vertical"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            style="@style/SocialNormalTxtBluekMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_readCount"
+            android:padding="15px"
+            android:text="删除"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_remark_num"
+            style="@style/SocialNormalTxtGrayMin"
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/comment"
+            android:drawablePadding="15px"
+            android:gravity="center_vertical" />
+
+
+        <TextView
+            android:id="@+id/tv_ok_num"
+            style="@style/SocialNormalTxtGrayMin"
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@+id/tv_remark_num"
+            android:drawableLeft="@drawable/give_good_selector"
+            android:drawablePadding="15px"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+
+</RelativeLayout>

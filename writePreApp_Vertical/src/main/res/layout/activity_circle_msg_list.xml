@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/page_tab_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="33px"
+        android:cacheColorHint="@color/white"
+        android:divider="@color/transparent"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible"
+        ptr:ptrMode="both" />
+    <RelativeLayout
+        android:id="@+id/rel_top_notice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_centerHorizontal="true">
+
+        <include
+            android:id="@+id/top_notice"
+            layout="@layout/view_top_notice" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/fab"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/fat_red_bg"
+        android:gravity="center"
+        android:text="发帖" />
+
+    <Button
+        android:id="@+id/join"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/fat_red_bg"
+        android:gravity="center"
+        android:text="加入" />
+
+</RelativeLayout>

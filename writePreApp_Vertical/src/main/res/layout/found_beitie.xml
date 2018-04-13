@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="20px"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/found_beitie_search_iv"
+            android:layout_width="70px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15px"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_search"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/found_beitie_search_et"
+            style="@style/SocialNormalTxtGray"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@+id/found_beitie_search_iv"
+            android:background="@drawable/shape_circle_button_gray"
+            android:drawableRight="@drawable/ic_search"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:hint="请输入书法家、碑帖名"
+            android:imeOptions="actionDone"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <com.easier.writepre.social.refreash.PullToRefreshListView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/found_beitie_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/white"
+        android:divider="@null"
+        android:dividerHeight="20px"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        android:visibility="visible"
+        ptr:ptrMode="manualOnly" />
+
+</LinearLayout>

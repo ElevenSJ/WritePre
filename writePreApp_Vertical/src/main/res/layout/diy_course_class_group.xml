@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/bg_gray" >
+    
+    
+    <Button
+        android:id="@+id/tv_num"
+        android:layout_margin="20px"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        style="@style/SocialNormalTxtRed"
+        android:gravity="center"
+        android:text="1"
+        android:background="@drawable/shape_circle_button_red"
+       />
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:layout_margin="20px"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        style="@style/SocialNormalTxtBlack"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:hint="@string/tv_course_class_hit_string"
+        android:background="@color/transparent"
+       />
+
+</LinearLayout>

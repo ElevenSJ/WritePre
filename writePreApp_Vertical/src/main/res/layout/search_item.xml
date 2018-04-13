@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_circle_button_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15px">
+
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/iv_img_head"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/empty_head" />
+
+
+        <TextView
+            android:id="@+id/tv_uname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/iv_img_head"
+            android:text="名字"
+            android:textColor="#333333"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/tv_signature"
+            style="@style/SocialNormalTxtGraySmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_uname"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/iv_img_head"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="签名"
+            android:textSize="22px" />
+
+    </RelativeLayout>
+
+</LinearLayout>

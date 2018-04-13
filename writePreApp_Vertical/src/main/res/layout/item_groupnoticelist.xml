@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:paddingTop="20px">
+
+        <!--头像-->
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/square_iv_head"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+        <!--内容-->
+        <LinearLayout
+            android:id="@+id/ll_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/square_iv_head"
+            android:orientation="vertical"
+            android:paddingBottom="15px"
+            android:paddingLeft="20px"
+            android:paddingRight="0px">
+            <!--名字-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_uname"
+                    style="@style/SocialNormalTxtBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+                <!--签到-->
+                <Button
+                    android:id="@+id/btn_qiandao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/guanzhu_btn_selector"
+                    android:paddingBottom="8px"
+                    android:paddingLeft="16px"
+                    android:paddingRight="16px"
+                    android:paddingTop="8px"
+                    android:text="已查看"
+                    android:textColor="@drawable/guanzhu_text_color_selector"
+                    android:textSize="24px" />
+            </RelativeLayout>
+            <!--时间地点-->
+            <LinearLayout
+                android:id="@+id/layout_other_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_ctime"
+                    style="@style/SocialNormalTxtGrayMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:text="" />
+
+            </LinearLayout>
+            <!--文本内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8px"
+                    android:autoLink="web"
+                    android:lineSpacingExtra="5px"
+                    android:text=""
+                    android:textColorHighlight="@color/social_red"
+                    android:textScaleX="1.0" />
+            </LinearLayout>
+            <!--图片内容-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.easier.writepre.widget.SquareAllEssenceGridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20px"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@null"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/album_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:maxHeight="@dimen/album_image_max_height"
+                    android:maxWidth="@dimen/album_image_max_width"
+                    android:minHeight="@dimen/album_image_min_size"
+                    android:minWidth="@dimen/album_image_min_size"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20px">
+                <!--删除按钮-->
+                <TextView
+                    android:id="@+id/tv_delete"
+                    style="@style/SocialNormalTxtBluekMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_qiandao_lookall"
+                    style="@style/SocialNormalTxtBluekMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_qiandaonum"
+                    android:text="已查看人数: "
+                    android:textColor="@color/blue_low"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_qiandaonum"
+                    style="@style/SocialNormalTxtBluekMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0"
+                    android:textColor="@color/blue_low"
+                    android:textSize="26px" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

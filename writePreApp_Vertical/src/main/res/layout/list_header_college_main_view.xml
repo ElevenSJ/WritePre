@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="@dimen/banner_width"
+        android:layout_height="@dimen/banner_height"
+        android:background="@color/white">
+
+        <com.easier.writepre.widget.ChildViewPager
+            android:id="@+id/banner_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <com.easier.writepre.widget.ViewPageIndicator
+            android:id="@+id/banner_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:padding="15px" />
+    </RelativeLayout>
+
+    <com.easier.writepre.widget.MyGridView
+        android:id="@+id/gv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10px"
+        android:background="@color/white"
+        android:horizontalSpacing="10px"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingBottom="20px"
+        android:paddingTop="20px"
+        android:verticalSpacing="30px"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:background="@color/white"
+        android:layout_marginTop="20px"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_little_master"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/college_menu_green"/>
+            <TextView
+                android:id="@+id/tv_little_master"
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="小书法师报名"
+                android:gravity="center"
+                android:textColor="#40c784"
+                android:duplicateParentState="true"
+                android:layout_marginTop="20px"/>
+        </LinearLayout>
+
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="120px"-->
+            <!--android:background="@drawable/social_line"-->
+            <!--android:layout_gravity="center"/>-->
+
+        <LinearLayout
+            android:id="@+id/ll_calligraphy_talents"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/college_menu_orange"/>
+            <TextView
+                android:id="@+id/tv_calligraphy_talents"
+                style="@style/SocialNormalTxtBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="书法专业人才报名"
+                android:textColor="#ff8b01"
+                android:drawablePadding="20px"
+                android:duplicateParentState="true"
+                android:layout_marginTop="20px"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/SocialNormalTxtBlack30"
+        android:layout_width="match_parent"
+        android:layout_height="126px"
+        android:layout_marginTop="20px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="书院风采" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/social_line" />
+</LinearLayout>

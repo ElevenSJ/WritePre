@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="image_view_margin_min_width">135dp</dimen>
+    <dimen name="image_view_margin_width">400dp</dimen>
+    <dimen name="image_view_more_margin_width">320dp</dimen>
+
+    <!-- 自动布局设计图宽高 -->
+    <dimen name="design_width">1536px</dimen>
+    <dimen name="design_height">2048px</dimen>
+
+    <!-- banner宽高3：1 -->
+    <dimen name="banner_width">1536px</dimen>
+    <dimen name="banner_height">512px</dimen>
+    <dimen name="album_image_min_size">140px</dimen>
+    <dimen name="album_image_max_height">764px</dimen>
+    <dimen name="album_image_max_width">1020px</dimen>
+    <dimen name="miaohong_bg">1320px</dimen>
+
+    <!-- 大赛作品宽高 -->
+    <dimen name="work_width">1460px</dimen>
+    <dimen name="work_height">892px</dimen>
+
+    <!-- v展作品高 -->
+    <dimen name="v_show_height">700px</dimen>
+    
+    <!-- 临写大会首页,大会视频、教师专区、学生专区高度 -->
+    <dimen name="pk_main_img_height">400px</dimen>
+
+    <!-- 知识库隐藏式抽屉弹出框 -->
+    <dimen name="drawer_width">600dp</dimen>
+    
+    <!-- dialog的宽度-->
+    <dimen name="dialog_width">900px</dimen>
+    <dimen name="dialog_et_width">360px</dimen>
+
+    <!-- 微展书法家图片高度 -->
+    <dimen name="micro_exhibition_img_height">600px</dimen>
+    <!-- 登录输入框离左右屏幕距离 -->
+    <dimen name="login_input_box_distance">180px</dimen>
+    <!-- 登录button离右屏幕距离 -->
+    <dimen name="login_button_distance">220px</dimen>
+    <!-- 注册界面离上方距离 -->
+    <dimen name="login_top_distance">456px</dimen>
+    <!-- 全局共用距离 -->
+    <dimen name="distance20px">40px</dimen>
+    <dimen name="distance36px">72px</dimen>
+    <dimen name="distance126px">256px</dimen>
+</resources>

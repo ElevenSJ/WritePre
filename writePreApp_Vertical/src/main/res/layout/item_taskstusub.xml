@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/red_line"
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:background="@color/social_red"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.easier.writepre.widget.TaskChildViewPager
+                    android:id="@+id/pk_image_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/work_height"></com.easier.writepre.widget.TaskChildViewPager>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pk_linear_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal"></LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/play_video"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/video_player_icon"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/SocialNormalTxtBlack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="20px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calligrapher_jianjie" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/calligrapher_jianjie" />
+
+                <TextView
+                    android:id="@+id/tv_learn_time"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px">
+
+        <com.easier.writepre.widget.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_name_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_head"
+            android:orientation="vertical"
+            android:paddingLeft="10px">
+
+            <TextView
+                android:id="@+id/tv_uname"
+                style="@style/SocialNormalTxtBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:text="aaaa" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/SocialNormalTxtGraySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_uname"
+                android:layout_marginTop="10px"
+                android:text="wwww" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_review"
+            style="@style/SocialNormalTxtGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_btn_selector"
+            android:paddingBottom="5px"
+            android:paddingLeft="15px"
+            android:paddingRight="15px"
+            android:paddingTop="5px"
+            android:text="审阅"
+            android:textColor="@drawable/btn_enable_text_selector"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="@color/act_bg" />
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    style="@style/SocialNormalTxtBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="36px"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:viewAspectRatio="2.22"
+        fresco:placeholderImage="@drawable/empty_photo"
+        fresco:placeholderImageScaleType="fitXY"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_marginTop="30px">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/social_line"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/social_line"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:layout_width="5px"
+            android:layout_height="match_parent"
+            android:background="@color/social_red" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@drawable/social_line"
+            android:layout_alignParentRight="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:paddingRight="20px">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/SocialNormalTxtBlack30"
+                android:layout_width="wrap_content"
+                android:layout_height="90px"
+                android:text="小书法师"
+                android:gravity="center_vertical"
+                 />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/SocialNormalTxt666Small"
+                android:layout_width="wrap_content"
+                android:layout_height="92px"
+                android:text="小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师小书法师"
+                android:lineSpacingMultiplier="1.5"
+                android:layout_marginBottom="18px"
+                android:ellipsize="end"
+                android:maxLines="2"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

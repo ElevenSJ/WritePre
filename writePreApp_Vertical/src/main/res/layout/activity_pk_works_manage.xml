@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fragment_pk"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="100px" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@drawable/go_back" />
+
+        <TextView
+            style="@style/SocialTitleCenterTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="作品管理" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_send_works"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="#FF0000"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvvv"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_top"
+        android:background="@drawable/social_line" />
+
+    <ScrollView
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvvv" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_pk_video"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <com.easier.writepre.widget.RoundImageView
+                        android:id="@+id/iv_ts_head_info"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_ts_uname_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="莫凭蓝"
+                                android:textColor="@color/gray" />
+
+                            <ImageView
+                                android:id="@+id/iv_guide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/tv_ts_uname_info"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/right_icon" />
+
+                            <TextView
+                                android:id="@+id/tv_ts_status_info"
+                                style="@style/SocialNormalTxtWhiteleast"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/iv_guide"
+                                android:background="@drawable/fillet_text_bg"
+                                android:text="初选" />
+
+                            <TextView
+                                android:id="@+id/tv_ts_teacher_info"
+                                style="@style/SocialNormalTxtWhiteleast"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/tv_ts_status_info"
+                                android:background="@drawable/fillet_text_bg"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_ts_cata_title_info"
+                                style="@style/SocialNormalTxtWhiteleast"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/tv_ts_teacher_info"
+                                android:background="@drawable/fillet_text_bg"
+                                android:text="史晨帖"
+                                android:visibility="gone"/>
+
+                            <ImageView
+                                android:id="@+id/iv_pk_report_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:contentDescription="@string/app_name"
+                                android:padding="10px"
+                                android:layout_marginRight="40px"
+                                android:src="@drawable/pk_works_select" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_ts_uptime_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2016年02月03日" />
+
+                            <TextView
+                                android:id="@+id/tv_ts_city_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp" />
+
+                            <TextView
+                                android:id="@+id/tv_ts_works_no_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="NO：123456"
+                                android:textColor="@color/social_red" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pk_status_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_pk_status0_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/state_bg"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="初"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_pk_status1_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/state_bg"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="复"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_pk_status2_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/state_bg"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="决"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="添加图片（小贴士：最多可上传六张图片）"
+                    android:textColor="#1ca3c5" />
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_pk_ts_status0_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="10dp" />
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_pk_ts_status1_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="10dp"
+                    android:visibility="gone" />
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_pk_ts_status2_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@drawable/social_line" />
+
+                <TextView
+                    android:id="@+id/txt_video_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="添加视频（小贴士：初选为选填，复选、现场大会为必填）"
+                    android:textColor="#1ca3c5" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_video_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="20px" >
+
+                    <ImageView
+                        android:id="@+id/img_video_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/video_player_icon"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_add_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_addpic_unfocused"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_selected_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_addpic_unfocused"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/img_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/img_selected_video"
+                        android:src="@drawable/pk_works_pic_delete"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <com.easier.writepre.widget.MyGridView
+                    android:id="@+id/gv_video"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:cacheColorHint="#00000000"
+                    android:fadingEdge="none"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:numColumns="1"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:paddingBottom="20dp" >
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textColor="#ff0000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可编辑截止日期为    "
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tv_endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333" />
+    </LinearLayout>
+
+</RelativeLayout>

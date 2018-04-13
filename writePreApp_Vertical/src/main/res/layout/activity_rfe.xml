@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/social_topbar_layout" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/sl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shufashi_bg">
+                <!--头像昵称-->
+                <LinearLayout
+                    android:id="@+id/ll_learn_headimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.easier.writepre.widget.RoundImageView
+                        android:id="@+id/head_image"
+                        android:layout_width="160px"
+                        android:layout_height="160px"
+                        android:layout_marginTop="36px"
+                        android:src="@drawable/icon_def_header" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/SocialTitleCenterTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px"
+                        android:text="名字"
+                        android:textColor="#000000"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rel_base_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_learn_headimage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="66px"
+                    android:layout_marginTop="30px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!--考试等级-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SocialNormalTxtGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="等级: "
+                            android:textColor="#000000"
+                            android:textSize="26px" />
+
+                        <TextView
+                            android:id="@+id/tv_examination_grades"
+                            style="@style/SocialNormalTxtGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="26px" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="30px"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="10px"
+                        android:background="@color/gray_low" />
+                    <!--已修学时-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/SocialNormalTxtGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|left"
+                            android:text="学时: "
+                            android:textColor="#000000"
+                            android:textSize="26px" />
+
+                        <TextView
+                            android:id="@+id/tv_learning_time"
+                            style="@style/SocialNormalTxtGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textSize="26px" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <!--题库-->
+                <LinearLayout
+                    android:id="@+id/ll_questions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="60px"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px"
+                        android:background="@drawable/btn_topbotton_1"
+                        android:gravity="center"
+                        android:paddingBottom="18px"
+                        android:paddingTop="18px"
+                        android:text="理 论 题 库"
+                        android:textColor="#bf95dd"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+                <!--模拟考试-->
+                <LinearLayout
+                    android:id="@+id/ll_simulation_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_simulation_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginLeft="96px"
+                        android:layout_marginRight="96px"
+                        android:layout_marginTop="30px"
+                        android:background="@drawable/btn_topbotton_2"
+                        android:gravity="center"
+                        android:paddingBottom="18px"
+                        android:paddingTop="18px"
+                        android:text="理 论 测 试"
+                        android:textColor="#ff7f64"
+                        android:textSize="30px" />
+                </LinearLayout>
+                <!--考试-->
+                <LinearLayout
+                    android:id="@+id/ll_examination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="60px"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px"
+                        android:background="@drawable/btn_topbotton_3"
+                        android:gravity="center"
+                        android:paddingBottom="18px"
+                        android:paddingTop="18px"
+                        android:text="正 式 考 试"
+                        android:textColor="#9ac116"
+                        android:textSize="30px" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <RelativeLayout
+                android:id="@+id/rel_top_recommendtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
+                android:background="#f6f6f6"
+                android:gravity="center_vertical"
+                android:paddingBottom="38px"
+                android:paddingRight="15px"
+                android:paddingTop="38px"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="25px"
+                    android:layout_height="20px"
+                    android:layout_centerVertical="true"
+                    android:background="@color/social_red" />
+
+                <TextView
+                    android:id="@+id/tv_recommend_title"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="小书法师推送课"
+                    android:textColor="#333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_recommendmore"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/arraw_right"
+                    android:text="更多 "
+                    android:textSize="22px" />
+            </RelativeLayout>
+
+            <com.easier.writepre.widget.OpenListViewOnScrollView
+                android:id="@+id/lv_course_push"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="#f6f6f6"
+                android:cacheColorHint="@color/white"
+                android:divider="#f6f6f6"
+                android:dividerHeight="20px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none"
+                android:smoothScrollbar="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rel_top_tasktitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8px"
+                android:gravity="center_vertical"
+                android:paddingBottom="38px"
+                android:paddingRight="15px"
+                android:paddingTop="38px"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="25px"
+                    android:layout_height="20px"
+                    android:layout_centerVertical="true"
+                    android:background="@color/social_red" />
+
+                <TextView
+                    android:id="@+id/tv_tasktitle"
+                    style="@style/SocialNormalTxtBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="学习圈作业"
+                    android:textColor="#333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_taskmore"
+                    style="@style/SocialNormalTxtGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/arraw_right"
+                    android:text="更多 "
+                    android:textColor="#999999"
+                    android:textSize="22px" />
+            </RelativeLayout>
+
+            <com.easier.writepre.widget.OpenListViewOnScrollView
+                android:id="@+id/lv_taskhomework"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="#f6f6f6"
+                android:cacheColorHint="@color/white"
+                android:divider="#f6f6f6"
+                android:dividerHeight="20px"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="false"
+                android:listSelector="@color/transparent"
+                android:scrollbars="none"
+                android:smoothScrollbar="true"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <Button
+        android:id="@+id/fab"
+        style="@style/SocialNormalTxtWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="66px"
+        android:layout_marginRight="10px"
+        android:background="@drawable/fat_red_bg"
+        android:gravity="center"
+        android:text="交流" />
+</RelativeLayout>
